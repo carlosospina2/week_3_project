@@ -2,13 +2,13 @@ import os
 
 def add_blocker():
     """Paso 2 y 4: Añadir datos con validación"""
-    # Verificamos si el archivo ya existe para alertar al usuario (Paso 4)
+    # We check if the file already exists to alert the user. (step 4)
     if os.path.exists("database.txt"):
         print("Note: 'database.txt' already exists. Data will be appended.")
     
     blocker = input("Enter your daily blocker: ")
     
-    # Modo 'a' (append) para persistencia sin borrar lo anterior
+    # Mode 'a' (append) to persist without erasing the previous
     with open("database.txt", "a") as file:
         file.write(blocker + "\n")
     print("Success: Blocked saved to persistence storage.")
@@ -49,15 +49,16 @@ if __name__ == "__main__":
     main()
 
 """
-PASO 5: PRÁCTICA DE INGLÉS
+step 5: ENGLISH PRACTICE
 
-1. SELECCIÓN DE PROTOCOLO:
+
+1. PROTOCOL SELECTION:
 I will use Slack to report any file-related bugs because the issue requires immediate 
 attention from the team. I'll post a clear description in the engineering channel 
 to ensure the blocker is resolved quickly. Please let me know if you need the 
 error logs to investigate further.
 
-2. INTEGRACIÓN DE VOCABULARIO:
+2. VOCABULARY INTEGRATION:
 This script focuses on data persistence by storing user input in a permanent text file. 
 I implemented a function to fetch (obtener) the logs, and I used the append mode 
 to ensure we do not accidentally overwrite (sobrescribir) existing information. 
